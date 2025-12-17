@@ -3,7 +3,7 @@ services:
     image: dockurr/windows
     container_name: windows
     environment:
-      VERSION: "11"
+      VERSION: "2019"
     devices:
       - /dev/kvm
       - /dev/net/tun
@@ -17,3 +17,8 @@ services:
       - ./windows:/storage
     restart: always
     stop_grace_period: 2m
+environment:
+  DISK_SIZE: "256G"
+environment:
+  RAM_SIZE: "8G"
+  CPU_CORES: "4"
